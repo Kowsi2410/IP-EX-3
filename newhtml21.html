@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Webpage</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Fixed image on scroll */
+    .fixed-image {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+
+    /* Form container */
+    .form-container {
+      position: fixed;
+      top: 10%;
+      right: 50px;
+      transform: translateY(-50%);
+      padding: 50px;
+      border: 10px solid #ccc;
+      display: none;
+    }
+
+    /* Animation for product showcase */
+    .product-container {
+      position: fixed;
+      top: 50%;
+      left: 100px;
+      transform: translateY(-50%);
+      width: 800px;
+      overflow: hidden;
+    }
+
+    .product-images {
+      display: flex;
+      flex-direction: column;
+      animation: changeProduct 5s infinite;
+    }
+
+    @keyframes changeProduct {
+      0%, 25% { transform: translateY(0); }
+      30%, 55% { transform: translateY(-100%); }
+      60%, 85% { transform: translateY(-200%); }
+      90%, 100% { transform: translateY(0); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Fixed Image -->
+  <div class="fixed-image" onclick="showForm()">
+    <img src="https://www.legalraasta.com/blog/wp-content/uploads/2019/04/Best-companies-that-Sell-Online-products-In-India-1280x720.jpg" alt="Clickable Image">
+  </div>
+
+  <!-- Form Container -->
+  <div class="form-container" id="formContainer">
+    <h2>Personal Details Form</h2>
+    <!-- Your form HTML goes here -->
+    <form>
+      <!-- Your form fields go here -->
+    </form>
+  </div>
+
+  <!-- Product Showcase -->
+  <div class="product-container">
+    <div class="product-images">
+      <!-- Images of different products with appropriate alt text -->
+      <img src="https://images-static.nykaa.com/uploads/tr:w-412,/8a294de4-f9b7-4f01-b360-ba1af854307e.jpg" alt="Product 1">
+      <img src="https://cdn.mos.cms.futurecdn.net/5fZ9T6tYuDX5d6gtWu529R-1200-80.jpg" alt="Product 2">
+      <img src="https://m.media-amazon.com/images/G/31/img23/Beauty/BAU/Makeup/Lakme_Makeup_Brands_in_focus_28_09_23._SY700_QL85_.jpg" alt="Product 3">
+      <!-- Add more product images as needed -->
+    </div>
+  </div>
+
+  <!-- Add your other webpage content here -->
+
+  <script>
+    // Function to show the form container
+    function showForm() {
+      var formContainer = document.getElementById('formContainer');
+      formContainer.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
+
+    
